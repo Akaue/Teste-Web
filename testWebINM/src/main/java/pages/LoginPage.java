@@ -28,17 +28,10 @@ public class LoginPage extends BasePage{
 	   return this;
 	}		
 	
-	
-	public String txt_error() {
-		
-		return driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/h3")).getText();
-		
-	}
-	
-	
 		
 	public StorePage btn_login() {		
 		driver.findElement(By.id("login-button")).click();
+		
 		
 	  return new StorePage(driver);
 	}		

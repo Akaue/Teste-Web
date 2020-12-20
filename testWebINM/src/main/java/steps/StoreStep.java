@@ -58,15 +58,15 @@ public class StoreStep {
 	@When("Adiciono um produto")
 	public void adiciono_um_produto() {
 		new StorePage(driver)
-	     .add_cart2();
+	       .add_cart2();
 	     
 	}
 
    @Then("Removo o produto")
 	public void removo_o_produto() {
 		new StorePage(driver)
-	     .rmv_cart();
-		
+	       .rmv_cart();
+		  
 		Assert.assertEquals("ADD TO CART", "ADD TO CART");
 		driver.close();
 	}	
@@ -77,8 +77,8 @@ public class StoreStep {
 	public void eu_escolho_algumas_roupas() {
 		
 	    new StorePage(driver)
-		  .add_cart()
-		  .shop_cart();
+		   .add_cart()
+		   .shop_cart();
 	}	
 	
 	
