@@ -7,10 +7,10 @@ public class StorePage extends BasePage {
 
 	public StorePage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
-	
+	//ordena peças do menor para maior
 	public StorePage order_list() {
 		
 		driver.findElement(By.className("product_sort_container")).click();
@@ -19,6 +19,7 @@ public class StorePage extends BasePage {
 		return this;		
 	}
 	
+         //ordena peças de A a Z
 	public StorePage order_list_a_z() {
 		
 		driver.findElement(By.className("product_sort_container")).click();
@@ -27,7 +28,7 @@ public class StorePage extends BasePage {
 		return this;		
 	}	
 	
-	
+	//adiciona ao carrinho três peças
 	public StorePage add_cart() {
 		
 		driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[3]/div[3]/button")).click();
@@ -37,6 +38,7 @@ public class StorePage extends BasePage {
 		return this;		
 	}
 	
+	//adiciona ao carrinho uma peça
 	public StorePage add_cart2() {
 		
 		driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div/div[1]/div[3]/button")).click();
@@ -45,6 +47,7 @@ public class StorePage extends BasePage {
 		return this;		
 	}
 	
+	//remove do carrinho
 	public StorePage rmv_cart() {
 		
 		driver.findElement(By.xpath("//*[@class=\"btn_secondary btn_inventory\"]")).click();
@@ -55,7 +58,7 @@ public class StorePage extends BasePage {
 	
 	
 		
-	
+	 //clica para acessar o carrinho de compras
 	public StorePage shop_cart() {
 		
 		driver.findElement(By.id("shopping_cart_container")).click();
@@ -64,6 +67,7 @@ public class StorePage extends BasePage {
 	}
 	
 	
+	//clica no botão checkout para prosseguir
 	public CartPage btn_checkout() {
 		
 		driver.findElement(By.xpath("//a[contains(text(),'CHECKOUT')]")).click();		
