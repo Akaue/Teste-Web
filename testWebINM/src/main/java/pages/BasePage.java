@@ -6,7 +6,7 @@ public class BasePage {
 	
 	protected WebDriver driver;
 	
-	
+	//instancia webdriver
 	public BasePage(WebDriver driver) {
 		
 		this.driver = driver;
