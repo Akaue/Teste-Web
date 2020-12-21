@@ -7,10 +7,10 @@ public class LoginPage extends BasePage{
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub		
+			
 	}
 	
-	
+	 //insere o login e a senha
 	public LoginPage type_login(String username, String password) {
 		driver.findElement(By.id("user-name")).sendKeys(username);
 		driver.findElement(By.id("password")).sendKeys(password);	
@@ -18,7 +18,7 @@ public class LoginPage extends BasePage{
 		return this;			
 	}
 	
-	
+	//imprime no console os usuários da pagina
 	public LoginPage capture_users() {
 		
 	  String captura_usuarios = driver.findElement(By.id("login_credentials")).getText();	
@@ -28,7 +28,7 @@ public class LoginPage extends BasePage{
 	   return this;
 	}		
 	
-		
+	  //botão para realizar login	
 	public StorePage btn_login() {		
 		driver.findElement(By.id("login-button")).click();
 		
